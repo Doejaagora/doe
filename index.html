@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude uma Criança</title>
+    <style>
+        body {
+            background-color: #4CAF50; /* Fundo verde */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px; /* Diminui o padding do body */
+        }
+        .container {
+            max-width: 500px; /* Diminui a largura do container */
+            margin: auto;
+            padding: 20px; /* Diminui o padding do container */
+            border-radius: 10px; /* Diminui o raio das bordas */
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        button {
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            padding: 8px 16px; /* Diminui o padding do botão */
+            border-radius: 4px; /* Diminui o raio das bordas do botão */
+            cursor: pointer;
+            font-size: 14px; /* Diminui o tamanho da fonte */
+            transition: background-color 0.3s; /* Transição ao botão */
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        h1 {
+            font-size: 24px; /* Diminui o tamanho do título principal */
+            margin-top: 10px; /* Diminui a margem superior */
+        }
+        h2 {
+            font-size: 20px; /* Diminui o tamanho do subtítulo */
+            font-weight: bold;
+            margin-top: 20px; /* Diminui a margem superior */
+        }
+        .highlight {
+            font-size: 24px; /* Tamanho do título destacado */
+            color: #FFD700; /* Cor dourada para destaque */
+            margin: 20px 0; /* Margem do título destacado */
+        }
+        .image-container {
+            margin: 15px 0; /* Diminui a margem da imagem */
+            display: inline-block; /* Alinha a imagem ao centro */
+        }
+        img {
+            max-width: 100%;
+            width: 70%; /* Mantém a largura da imagem */
+            border-radius: 10px; /* Raio das bordas da imagem */
+        }
+        p {
+            font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+            line-height: 1.5; /* Diminui o espaçamento entre linhas */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ajude uma Criança com Tumor</h1>
+        <p>Seu apoio pode fazer a diferença na vida de uma criança que luta contra o câncer. Faça sua doação e ajude a trazer esperança e alegria para essas vidas.</p>
+        
+        <div class="image-container">
+            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/42557187/yvNpNrUaMWMqNSHl.png?Expires=1729558208&Signature=D9ttTyKM-kJx0tovq0jmKOXlXcue9fW5Zy6lqbGVMAVPioDSdXWx~3W9TlPRD4CR6kYN~HQRBtsPE8LZlyKefqj0SjI6lJWNNS50WdmVwGEkKs~axTFv7X787Zi7qAQGfN5yz504WqH266uojUUbVmfaLk1UKMIGf251s-TyCBCxuvk0M6e9MoW7zqi8OarzXFTL4Yid9qJ4G34t2EYYXCQuVWOotit72CdP-EwKwGU8wZ3a3mM-1LFGP-2jFcfDqMOVUbHXYgYxy-cGzpHJUwFuvqJnWTOn7F24~14IUlvI4doKN-cu47B0HMpTxn72BGEA3QWOCKlw847ARaw7Mw__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Criança com Tumor">
+        </div>
+
+        <h2 class="highlight">Doe agora</h2>
+        <h2>Chave PIX: <span id="pix-key">317332c5-8306-471c-9d0d-3a87bc7f835b</span></h2>
+        <button onclick="copyPixKey()">Copiar Chave PIX</button>
+        <p id="copy-message" style="display:none; margin-top: 10px;">Chave PIX copiada!</p>
+    </div>
+
+    <script>
+        function copyPixKey() {
+            const pixKey = document.getElementById("pix-key").innerText;
+            const textarea = document.createElement("textarea");
+            textarea.value = pixKey;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            document.getElementById("copy-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
